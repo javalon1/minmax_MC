@@ -9,7 +9,8 @@ public class App {
 
         int[] a = {4, 6, 2, 1, 3};
 
-        System.out.println(min(a));
+        System.out.println("minimalna liczba: " + min(a));
+        System.out.println("maksymalna liczba: "+ max(a));
     }
 
     public static int min(int[] a) {
@@ -20,6 +21,17 @@ public class App {
                 wynik = a[i];
             } else {
                 i++;
+            }
+        }
+        return wynik;
+    }
+
+    public static int max(int[] a) {
+        int wynik = a[0];
+
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] > wynik) {
+                wynik = a[i];
             }
         }
         return wynik;
